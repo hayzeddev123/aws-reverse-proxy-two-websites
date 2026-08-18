@@ -22,20 +22,6 @@ Both websites will use a reverse proxy as an additional layer between users and 
 
 ![Reverse Proxy Architecture](reverse-proxy.drawio.png)
 
-```
-                    Internet
-                       |
-                Load Balancer
-                       |
-              Reverse Proxy
-             /             \
-      E-Commerce          CMS Website
-          |                   |
-       EC2 Servers          EC2 Servers
-          |                   |
-         RDS              Database
-```
-
 ---
 
 ## 3. Reverse Proxy Implementation
@@ -88,16 +74,6 @@ Both websites should use:
 * **Auto Scaling Groups** to automatically adjust the number of EC2 instances.
 * **Multiple Availability Zones** to reduce downtime.
 * **Health checks** to remove unhealthy servers from service.
-
-```
-              Load Balancer
-              /           \
-           AZ-A           AZ-B
-            |               |
-        Reverse Proxy   Reverse Proxy
-            |               |
-          EC2             EC2
-```
 
 ---
 
