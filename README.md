@@ -18,9 +18,9 @@ The second is a **CMS website** used for articles and blogs.
 
 Both websites will use a reverse proxy as an additional layer between users and the application servers.
 
-**Architecture Diagram (created with draw.io):**
+**Architecture Diagram:**
 
-<img src="reverse%20proxy.drawio.png" alt="Reverse Proxy Architecture" width="800"/>
+<img src="aws-reverse-proxy-architecture.png" alt="Reverse Proxy Architecture" width="900"/>
 
 ---
 
