@@ -20,7 +20,7 @@ Both websites will use a reverse proxy as an additional layer between users and 
 
 **Architecture Diagram:**
 
-<img src="aws-reverse-proxy-architecture.png" alt="Reverse Proxy Architecture" width="900"/>
+<img src="aws-reverse-proxy-architecture.svg" alt="Reverse Proxy Architecture" width="900"/>
 
 ---
 
