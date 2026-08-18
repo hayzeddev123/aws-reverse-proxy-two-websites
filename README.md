@@ -18,6 +18,10 @@ The second is a **CMS website** used for articles and blogs.
 
 Both websites will use a reverse proxy as an additional layer between users and the application servers.
 
+**Architecture Diagram (created with draw.io):**
+
+![Reverse Proxy Architecture](reverse-proxy.drawio.png)
+
 ```
                     Internet
                        |
