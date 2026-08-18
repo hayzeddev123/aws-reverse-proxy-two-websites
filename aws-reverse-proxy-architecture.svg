@@ -1,59 +1,144 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" font-family="Arial, Helvetica, sans-serif">
-  <rect width="1280" height="480" fill="#fff"/>
-  <text x="640" y="26" text-anchor="middle" font-size="17" fill="#232F3E">AWS Reverse Proxy Architecture — Two Company Websites</text>
-  <rect x="120" y="44" width="1140" height="420" rx="12" fill="#E8F4FC" stroke="#232F3E"/>
-  <text x="140" y="68" font-size="13" fill="#232F3E">AWS Cloud</text>
-  <rect x="470" y="84" width="770" height="360" rx="10" fill="#F7F9FC" stroke="#545B64"/>
-  <text x="490" y="106" font-size="12" fill="#545B64">VPC (Multi-AZ)</text>
-  <g transform="translate(16,210)">
-    <circle cx="36" cy="18" r="15" fill="none" stroke="#232F3E" stroke-width="2"/>
-    <circle cx="36" cy="11" r="5.5" fill="#232F3E"/>
-    <path d="M22 38c3-9 26-9 29 0" fill="none" stroke="#232F3E" stroke-width="2"/>
-    <text x="36" y="56" text-anchor="middle" font-size="11">Users</text>
-  </g>
-  <rect x="140" y="190" width="100" height="70" rx="8" fill="#8C4FFF"/>
-  <text x="190" y="222" text-anchor="middle" font-size="11" fill="#fff">Route 53</text>
-  <rect x="140" y="280" width="100" height="70" rx="8" fill="#DD344C"/>
-  <text x="190" y="310" text-anchor="middle" font-size="11" fill="#fff">ACM</text>
-  <text x="190" y="326" text-anchor="middle" font-size="10" fill="#fff">TLS Cert</text>
-  <rect x="270" y="190" width="110" height="70" rx="8" fill="#8C4FFF"/>
-  <text x="325" y="222" text-anchor="middle" font-size="11" fill="#fff">CloudFront</text>
-  <rect x="270" y="280" width="110" height="70" rx="8" fill="#DD344C"/>
-  <text x="325" y="318" text-anchor="middle" font-size="11" fill="#fff">AWS WAF</text>
-  <rect x="500" y="200" width="240" height="210" rx="8" fill="#E6F4EA" stroke="#137333"/>
-  <text x="510" y="220" font-size="11" fill="#137333">Public Subnets</text>
-  <rect x="520" y="235" width="200" height="60" rx="8" fill="#8C4FFF"/>
-  <text x="620" y="260" text-anchor="middle" font-size="11" fill="#fff">Application Load Balancer</text>
-  <rect x="520" y="305" width="200" height="80" rx="8" fill="#ED7100"/>
-  <text x="620" y="335" text-anchor="middle" font-size="11" fill="#fff">NGINX Reverse Proxy</text>
-  <text x="620" y="353" text-anchor="middle" font-size="10" fill="#fff">Auto Scaling Group</text>
-  <rect x="770" y="120" width="220" height="150" rx="8" fill="#F3E8FD" stroke="#6A1B9A"/>
-  <text x="780" y="140" font-size="11" fill="#6A1B9A">Private Subnet — CMS</text>
-  <rect x="790" y="155" width="180" height="50" rx="8" fill="#ED7100"/>
-  <text x="880" y="185" text-anchor="middle" font-size="11" fill="#fff">CMS App Servers</text>
-  <rect x="790" y="215" width="180" height="40" rx="8" fill="#1B660F"/>
-  <text x="880" y="240" text-anchor="middle" font-size="11" fill="#fff">S3 Static Assets</text>
-  <rect x="770" y="290" width="220" height="140" rx="8" fill="#FFF4E5" stroke="#B06000"/>
-  <text x="780" y="310" font-size="11" fill="#B06000">Private Subnet — E-Commerce</text>
-  <rect x="790" y="325" width="180" height="40" rx="8" fill="#ED7100"/>
-  <text x="880" y="350" text-anchor="middle" font-size="11" fill="#fff">E-Commerce Servers</text>
-  <rect x="790" y="375" width="180" height="40" rx="8" fill="#3B48CC"/>
-  <text x="880" y="400" text-anchor="middle" font-size="11" fill="#fff">Amazon RDS Multi-AZ</text>
-  <rect x="1020" y="220" width="190" height="80" rx="8" fill="#8C4FFF"/>
-  <text x="1115" y="255" text-anchor="middle" font-size="11" fill="#fff">NAT Gateway</text>
-  <text x="1115" y="273" text-anchor="middle" font-size="10" fill="#fff">Private outbound</text>
-  <defs>
-    <marker id="b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#232F3E"/></marker>
-  </defs>
-  <path d="M88 230 H140" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <path d="M240 225 H270" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <path d="M190 280 V260" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <path d="M325 260 V280" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <path d="M380 315 H500" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <path d="M720 250 H770" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <path d="M720 345 H770" stroke="#232F3E" fill="none" marker-end="url(#b)"/>
-  <text x="255" y="215" font-size="10">HTTPS</text>
-  <text x="400" y="305" font-size="10">Filter / Forward</text>
-  <text x="730" y="242" font-size="10">/blog</text>
-  <text x="730" y="337" font-size="10">/shop</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1683pt" height="635pt" viewBox="0.00 0.00 1683.40 635.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(43.2 592.2)">
+<title>AWS Reverse Proxy Architecture — Two Company Websites</title>
+<polygon fill="white" stroke="transparent" points="-43.2,43.2 -43.2,-592.2 1640.2,-592.2 1640.2,43.2 -43.2,43.2"/>
+<text text-anchor="middle" x="798.5" y="-10.4" font-family="Sans-Serif" font-size="22.00" fill="#2d3436">AWS Reverse Proxy Architecture — Two Company Websites</text>
+<g id="clust1" class="cluster">
+<title>cluster_AWS Cloud</title>
+<path fill="#e8f4fc" stroke="#232f3e" d="M205,-40C205,-40 1577,-40 1577,-40 1583,-40 1589,-46 1589,-52 1589,-52 1589,-529 1589,-529 1589,-535 1583,-541 1577,-541 1577,-541 205,-541 205,-541 199,-541 193,-535 193,-529 193,-529 193,-52 193,-52 193,-46 199,-40 205,-40"/>
+<text text-anchor="middle" x="242" y="-524.2" font-family="Sans-Serif" font-size="16.00" fill="#2d3436">AWS Cloud</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_VPC</title>
+<path fill="#f7f9fc" stroke="#545b64" d="M809,-48C809,-48 1569,-48 1569,-48 1575,-48 1581,-54 1581,-60 1581,-60 1581,-495 1581,-495 1581,-501 1575,-507 1569,-507 1569,-507 809,-507 809,-507 803,-507 797,-501 797,-495 797,-495 797,-60 797,-60 797,-54 803,-48 809,-48"/>
+<text text-anchor="middle" x="852.5" y="-491.8" font-family="Sans-Serif" font-size="14.00" fill="#2d3436">VPC (Multi-AZ)</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_ecom</title>
+<path fill="#fff4e5" stroke="#b06000" d="M1244,-56C1244,-56 1561,-56 1561,-56 1567,-56 1573,-62 1573,-68 1573,-68 1573,-248 1573,-248 1573,-254 1567,-260 1561,-260 1561,-260 1244,-260 1244,-260 1238,-260 1232,-254 1232,-248 1232,-248 1232,-68 1232,-68 1232,-62 1238,-56 1244,-56"/>
+<text text-anchor="middle" x="1334.5" y="-245.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Private Subnet — E-Commerce</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_public</title>
+<path fill="#e6f4ea" stroke="#137333" d="M817,-63C817,-63 1108,-63 1108,-63 1114,-63 1120,-69 1120,-75 1120,-75 1120,-443 1120,-443 1120,-449 1114,-455 1108,-455 1108,-455 817,-455 817,-455 811,-455 805,-449 805,-443 805,-443 805,-75 805,-75 805,-69 811,-63 817,-63"/>
+<text text-anchor="middle" x="858.5" y="-440.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Public Subnets</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_cms</title>
+<path fill="#f3e8fd" stroke="#6a1b9a" d="M1244,-272C1244,-272 1561,-272 1561,-272 1567,-272 1573,-278 1573,-284 1573,-284 1573,-464 1573,-464 1573,-470 1567,-476 1561,-476 1561,-476 1244,-476 1244,-476 1238,-476 1232,-470 1232,-464 1232,-464 1232,-284 1232,-284 1232,-278 1238,-272 1244,-272"/>
+<text text-anchor="middle" x="1309.5" y="-461.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Private Subnet — CMS</text>
+</g>
+<g id="node1" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/general/users.png" width="101px" height="101px" x="0" y="-437.5"/>
+<text text-anchor="middle" x="50.5" y="-322.1" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Users</text>
+</g>
+<g id="node2" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/network/route-53.png" width="101px" height="101px" x="201" y="-437.5"/>
+<text text-anchor="middle" x="251.5" y="-322.1" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Route 53</text>
+</g>
+<g id="edge1" class="edge">
+<path fill="none" stroke="#7b8894" d="M101.2,-387C128.27,-387 161.96,-387 190.49,-387"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="190.74,-390.5 200.74,-387 190.74,-383.5 190.74,-390.5"/>
+<text text-anchor="middle" x="151" y="-390.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">HTTPS</text>
+</g>
+<g id="node4" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/network/cloudfront.png" width="101px" height="101px" x="408" y="-392.5"/>
+<text text-anchor="middle" x="458.5" y="-277.1" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">CloudFront</text>
+</g>
+<g id="edge2" class="edge">
+<path fill="none" stroke="#7b8894" d="M302.12,-376.11C330.98,-369.77 367.52,-361.75 397.92,-355.08"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="398.96,-358.43 407.98,-352.87 397.46,-351.6 398.96,-358.43"/>
+<text text-anchor="middle" x="355" y="-371.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Resolve</text>
+</g>
+<g id="node3" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/security/certificate-manager.png" width="101px" height="101px" x="201" y="-235.5"/>
+<text text-anchor="middle" x="251.5" y="-119.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">ACM</text>
+<text text-anchor="middle" x="251.5" y="-105.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">TLS Certificate</text>
+</g>
+<g id="edge3" class="edge">
+<path fill="none" stroke="#7b8894" stroke-dasharray="5,2" d="M302.12,-223.01C331.6,-245.58 369.12,-274.31 399.9,-297.88"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="397.91,-300.77 407.98,-304.07 402.17,-295.21 397.91,-300.77"/>
+<text text-anchor="middle" x="355" y="-281.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">TLS</text>
+</g>
+<g id="node5" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/security/waf.png" width="101px" height="101px" x="602" y="-392.5"/>
+<text text-anchor="middle" x="652.5" y="-277.1" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">AWS WAF</text>
+</g>
+<g id="edge4" class="edge">
+<path fill="none" stroke="#7b8894" d="M509.44,-342C534.56,-342 565.18,-342 591.55,-342"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="591.81,-345.5 601.81,-342 591.81,-338.5 591.81,-345.5"/>
+<text text-anchor="middle" x="555.5" y="-345.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Filter</text>
+</g>
+<g id="node6" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/network/elb-application-load-balancer.png" width="101px" height="101px" x="813" y="-392.5"/>
+<text text-anchor="middle" x="863.5" y="-276.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Application</text>
+<text text-anchor="middle" x="863.5" y="-262.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Load Balancer</text>
+</g>
+<g id="edge5" class="edge">
+<path fill="none" stroke="#7b8894" d="M703.03,-342C732.98,-342 771.36,-342 802.96,-342"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="802.96,-345.5 812.96,-342 802.96,-338.5 802.96,-345.5"/>
+<text text-anchor="middle" x="758" y="-345.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Forward</text>
+</g>
+<g id="node7" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/compute/application-auto-scaling.png" width="101px" height="101px" x="1011" y="-335.5"/>
+<text text-anchor="middle" x="1061.5" y="-219.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">NGINX Reverse Proxy</text>
+<text text-anchor="middle" x="1061.5" y="-205.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Auto Scaling Group</text>
+</g>
+<g id="edge6" class="edge">
+<path fill="none" stroke="#7b8894" d="M914.21,-327.54C940.69,-319.84 973.44,-310.32 1001.23,-302.24"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="1002.22,-305.6 1010.84,-299.44 1000.26,-298.87 1002.22,-305.6"/>
+<text text-anchor="middle" x="962.5" y="-320.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Route</text>
+</g>
+<g id="node9" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/compute/application-auto-scaling.png" width="101px" height="101px" x="1240" y="-197.5"/>
+<text text-anchor="middle" x="1290.5" y="-81.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">E-Commerce</text>
+<text text-anchor="middle" x="1290.5" y="-67.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">App Servers</text>
+</g>
+<g id="edge7" class="edge">
+<path fill="none" stroke="#7b8894" d="M1112.04,-254.89C1147.06,-233.59 1194.15,-204.97 1231.02,-182.55"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="1232.95,-185.47 1239.68,-177.29 1229.32,-179.49 1232.95,-185.47"/>
+<text text-anchor="middle" x="1176" y="-236.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Proxy /shop</text>
+</g>
+<g id="node11" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/compute/application-auto-scaling.png" width="101px" height="101px" x="1240" y="-413.5"/>
+<text text-anchor="middle" x="1290.5" y="-297.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">CMS</text>
+<text text-anchor="middle" x="1290.5" y="-283.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">App Servers</text>
+</g>
+<g id="edge8" class="edge">
+<path fill="none" stroke="#7b8894" d="M1112.04,-302.02C1146.76,-313.95 1193.35,-329.96 1230.08,-342.58"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="1229.08,-345.94 1239.68,-345.88 1231.36,-339.32 1229.08,-345.94"/>
+<text text-anchor="middle" x="1176" y="-336.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Proxy /blog</text>
+</g>
+<g id="node8" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/network/nat-gateway.png" width="101px" height="101px" x="813" y="-190.5"/>
+<text text-anchor="middle" x="863.5" y="-75.1" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">NAT Gateway</text>
+</g>
+<g id="edge11" class="edge">
+<path fill="none" stroke="#7b8894" stroke-dasharray="5,2" d="M1239.9,-146.18C1161.39,-144.89 1008.73,-142.38 924.28,-140.98"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="924.14,-137.48 914.08,-140.82 924.03,-144.48 924.14,-137.48"/>
+<text text-anchor="middle" x="1061.5" y="-148.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Outbound</text>
+</g>
+<g id="node10" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/database/rds.png" width="101px" height="101px" x="1464" y="-197.5"/>
+<text text-anchor="middle" x="1514.5" y="-81.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Amazon RDS</text>
+<text text-anchor="middle" x="1514.5" y="-67.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Multi-AZ</text>
+</g>
+<g id="edge9" class="edge">
+<path fill="none" stroke="#7b8894" d="M1341.04,-147C1374.31,-147 1418.33,-147 1453.56,-147"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="1453.72,-150.5 1463.72,-147 1453.72,-143.5 1453.72,-150.5"/>
+<text text-anchor="middle" x="1402.5" y="-150.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Query</text>
+</g>
+<g id="node12" class="node">
+<image xlink:href="https://raw.githubusercontent.com/mingrammer/diagrams/master/resources/aws/storage/simple-storage-service-s3.png" width="101px" height="101px" x="1464" y="-413.5"/>
+<text text-anchor="middle" x="1514.5" y="-297.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">S3</text>
+<text text-anchor="middle" x="1514.5" y="-283.6" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">Static Assets</text>
+</g>
+<g id="edge10" class="edge">
+<path fill="none" stroke="#7b8894" d="M1341.04,-363C1374.31,-363 1418.33,-363 1453.56,-363"/>
+<polygon fill="#7b8894" stroke="#7b8894" points="1453.72,-366.5 1463.72,-363 1453.72,-359.5 1453.72,-366.5"/>
+<text text-anchor="middle" x="1402.5" y="-366.2" font-family="Sans-Serif" font-size="11.00" fill="#2d3436">Read/Write</text>
+</g>
+</g>
 </svg>
