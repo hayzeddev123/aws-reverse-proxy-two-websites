@@ -20,7 +20,7 @@ Both websites will use a reverse proxy as an additional layer between users and 
 
 **Architecture Diagram (created with draw.io):**
 
-![Reverse Proxy Architecture](reverse%20proxy.drawio.png)
+<img src="reverse%20proxy.drawio.png" alt="Reverse Proxy Architecture" width="800"/>
 
 ---
 
