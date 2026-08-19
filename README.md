@@ -16,6 +16,8 @@ The second is a **CMS website** used for articles and blogs.
 
 ## 2. Proposed Architecture
 
+<img src="aws-reverse-proxy-architecture.svg" alt="AWS Reverse Proxy Architecture — Two Company Websites" width="100%">
+
 Both websites will use a reverse proxy as an additional layer between users and the application servers.
 
 Users → Route 53 → CloudFront (TLS via ACM) → AWS WAF → Application Load Balancer → NGINX reverse proxy (Auto Scaling Group) → CMS app servers with S3, and e-commerce app servers with RDS Multi-AZ. Backend servers sit in private subnets. A NAT Gateway handles outbound traffic.
